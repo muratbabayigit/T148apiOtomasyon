@@ -6,6 +6,8 @@ import java.util.Scanner;
 
 public class JPHDatas {
     public static int basariliStatusCode=200;
+    public static String ContenType="application/json; charset=utf-8";
+    public static String connectionHeader="keep-alive";
 
 
     public static JSONObject expDataOlustur(){
@@ -13,9 +15,10 @@ public class JPHDatas {
         expBody.put("userId",3);
         expBody.put("id",22);
         expBody.put("title","dolor sint quo a velit explicabo quia nam");
-        expBody.put("body","os qui et ipsum ipsam suscipit aut\\nsed omnis non odio" +
-                "\\nexpedita earum mollitia molestiae aut atque rem suscipit" +
-                "\\nnam impedit esse");
+        expBody.put("body","eos qui et ipsum ipsam suscipit aut\n" +
+                "sed omnis non odio\n" +
+                "expedita earum mollitia molestiae aut atque rem suscipit\n" +
+                "nam impedit esse");
 
 
 
@@ -55,4 +58,38 @@ public class JPHDatas {
          return expBody;
 
      }
+
+
+/*
+       {
+            “title”: “Ahmet”,
+            “body”: “Merhaba”,
+            “userId”: 7,
+            “id”: 70
+        }
+
+
+ */
+
+    public static JSONObject jSONDataOlustur(){
+        JSONObject jSonData=new JSONObject();
+        jSonData.put("userId",3);
+        jSonData.put("id",22);
+        jSonData.put("title","Ahmet");
+        jSonData.put("body","Merhaba");
+
+        return jSonData;
+    }
+
+    public static JSONObject jSONDataOlusturPli(int userId,int id,String title,String body){
+        JSONObject jSonData=new JSONObject();
+        jSonData.put("userId",userId);
+        jSonData.put("id",id);
+        jSonData.put("title",title);
+        jSonData.put("body",body);
+
+        return jSonData;
+    }
+
+
 }
