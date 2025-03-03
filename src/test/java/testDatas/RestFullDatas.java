@@ -70,20 +70,18 @@ public class RestFullDatas {
         return bookingdates;
     }
 
-    public static JSONObject reqBodyOlustur2(String firstname, String lastname,int totalprice, boolean depositpaid, JSONObject bookingdate,String additionalneeds){
 
-        JSONObject bookingdates=new JSONObject();
-        bookingdates.put("checkin" , "2021-06-01");
-        bookingdates.put("checkout" , "2021-06-10");
-        JSONObject reqBody=new JSONObject();
-        reqBody.put("firstname","Murat");
-        reqBody.put("lastname","Yiğit");
-        reqBody.put("totalprice",1500);
-        reqBody.put("depositpaid",true);
-        reqBody.put("bookingdate",bookingdates);
-        reqBody.put("additionalneeds","wi-fi");
+        public static JSONObject reqBodyOlustur2(String firstname, String lastname,int totalprice, boolean depositpaid, JSONObject bookingdates,String additionalneeds){
 
-        return reqBody;
 
+            JSONObject reqBody=new JSONObject();
+            reqBody.put("firstname",firstname);
+            reqBody.put("lastname",lastname);
+            reqBody.put("totalprice",totalprice);
+            reqBody.put("depositpaid",depositpaid);
+            reqBody.put("bookingdate",bookingdates);
+            reqBody.put("additionalneeds",additionalneeds);
+
+            return reqBody;
     }
 }
