@@ -82,7 +82,7 @@ public class RestFullDatas {
         reqBody.put("lastname", lastname);
         reqBody.put("totalprice", totalprice);
         reqBody.put("depositpaid", depositpaid);
-        reqBody.put("bookingdate", bookingdates);
+        reqBody.put("bookingdates", bookingdates); //bookindates olmalı bookingdate olmuş
         reqBody.put("additionalneeds", additionalneeds);
 
         return reqBody;

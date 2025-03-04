@@ -64,5 +64,13 @@ public class P18_POST_testDataKullanimi extends RESTFULL_baseUrl {
         JsonPath resJP=response.jsonPath();
 
         assertEquals(resJP.get("booking.firstname"),expData.getJSONObject("booking").get("firstname"));
+        assertEquals(resJP.get("booking.lastname"),expData.getJSONObject("booking").get("lastname"));
+        assertEquals(resJP.get("booking.totalprice"),expData.getJSONObject("booking").get("totalprice"));
+        assertEquals(resJP.get("booking.depositpaid"),expData.getJSONObject("booking").get("depositpaid"));
+        assertEquals(resJP.get("booking.additionalneeds"),expData.getJSONObject("booking").get("additionalneeds"));
+        assertEquals(resJP.get("booking.bookingdates.checkin"),
+                     expData.getJSONObject("booking").getJSONObject("bookingdates").get("checkin"));
+        assertEquals(resJP.get("booking.bookingdates.checkout"),
+                     expData.getJSONObject("booking").getJSONObject("bookingdates").get("checkout"));
     }
 }
