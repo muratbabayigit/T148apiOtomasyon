@@ -51,7 +51,7 @@ public class RestFullDatas {
         reqBody.put("lastname", "Yiğit");
         reqBody.put("totalprice", 1500);
         reqBody.put("depositpaid", true);
-        reqBody.put("bookingdate", bookingdates);
+        reqBody.put("bookingdates", bookingdates);
         reqBody.put("additionalneeds", "wi-fi");
 
         return reqBody;
